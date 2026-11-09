@@ -371,7 +371,7 @@ function renderPrecipChart(hourly){
 /* Mientras se resuelve la cámara propia, usamos una webcam pública
    de Cerro Bayo (montaña, no la propiedad). Cambiá el alias para
    otra vista: cumbre, copitos, principiantes1500, telecabina1500, lagos, pista2 */
-const CERRO_CAM_ALIAS = 'cumbre';
+const CERRO_CAM_ALIAS = 'telecabina1500';
 const CERRO_CAM_URL = `https://ipcamlive.com/player/snapshot.php?alias=${CERRO_CAM_ALIAS}`;
 
 const camDot = document.getElementById('camDot');
@@ -386,7 +386,7 @@ function refreshCamera(){
     camWrap.appendChild(img);
     const badge = document.createElement('div');
     badge.className = 'cam-badge';
-    badge.innerHTML = '<span class="dot live" style="background:var(--red)"></span> CERRO BAYO · CUMBRE';
+    badge.innerHTML = '<span class="dot live" style="background:var(--red)"></span> CERRO BAYO · TELECABINA 1500';
     camWrap.appendChild(badge);
   }
   img.onload = () => { camDot.className = 'dot live'; camStatus.textContent = 'conectada'; };
